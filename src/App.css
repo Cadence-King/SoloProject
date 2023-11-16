@@ -1,38 +1,395 @@
-.App {
+
+/* Style the header image */
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the header */
+.header {
+  background-color: #74b6fd;
+  color: #fff;
+  text-align: left;
+  padding: 1px 0;
+  font-size: 1rem; /* Adjust the font size as needed */
+  margin: 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+}
+
+.logo {
+  max-width: 100px; /* Adjust the logo size as needed */
+  height: auto;
+  margin-bottom: 0px;
+  margin-right: 15px; /* Add spacing between the logo and title */
+  margin-left: 10px;
+}
+
+
+
+
+
+
+/* Style the bounding box for the paragraph */
+.paragraph-box {
+  border: 2px solid #007bff52; /* Border color (adjust as needed) */
+  padding: 10px 20px; /* Padding inside the box */
+  margin: 20px 5px; /* Margin to separate it from other content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle 3D effect */
+  display: inline-block; /* Ensure the box wraps its content */
+}
+
+/* Style the text inside the bounding box */
+.paragraph-text {
+  font-size: 16px; /* Font size (adjust as needed) */
+  color: #333; /* Text color */
+  line-height: 1.5; /* Line height for readability */
+}
+
+
+
+/* Style the navigation bar */
+nav {
+  background-color: #f70000;
+  color: #84d479;
+  padding: 10px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the navigation links */
+nav a {
+  color: #806161;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-dropdown .dropdown-content {
+  position: absolute;
+  top: 100%; /* Position the content below the button */
+  left: 0;
+}
+
+.dropdown-button {
+  background-color: #333; /* Button background color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown-button:hover {
+  background-color: #4d4d4d; /* Hover color */
+  /*border-radius: 0px;*/
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4d4d4d; /* Dropdown background color */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  top: 40px;
+  right: 0;
+  z-index: 1;
+  padding: 10px;
+}
+
+/* Styles for the dropdown links */
+.dropdown-content a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+
+.dropdown-content a:hover {
+  background-color: #007bff;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.clicked .dropdown-content {
+  display: block;
+}
+
+/* Add these styles to style the dropdown content */
+.show.clicked {
+  display: block;
+}
+
+
+/* Add styles for the locked and unlocked states */
+.locked .nav-dropdown .dropdown-button {
+  background-color: #007bff; /* Background color when the dropdown is locked */
+}
+
+/* Styles for the dropdown content */
+.locked .nav-dropdown .dropdown-content {
+  display: block;
+}
+
+/* Styles for the dropdown button */
+.locked .nav-dropdown .dropdown-button:hover {
+  background-color: #007bff; /* Hover color when the dropdown is locked */
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style the dark mode and text size buttons */
+.nav-right button {
+  background-color: #333; /* Button background color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-right button:hover {
+  background-color: #007bffd3; /* Hover color */
+}
+
+/* Add some padding to the buttons for spacing */
+.nav-right button:first-child {
+  margin-right: 10px;
+}
+
+
+/* Add styles for the home page button */
+.nav-button {
+  background-color: #333; /* Button background color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline for link element */
+  display: inline-block; /* Prevent link element from stretching */
+}
+
+
+.nav-left .nav-button {
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Style the clickable tiles on the home page */
+.tile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust the tile width as needed */
+  gap: 50px; /* Adjust the gap between tiles as needed */
+  padding: 50px;
+}
+
+/* Style the clickable tiles */
+.tile {
+
+  background-color: #007bff;
+  color: #ffffff;
+  width: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.tile:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style the tile text */
+.tile-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Style the tile description */
+.tile-description {
+  font-size: 14px;
+  margin-top: 5px;
+  display: none; /* Initially hidden */
+}
+
+/* Show the tile description on hover */
+.tile:hover .tile-description {
+  display: block;
+}
+
+/* Style the title */
+.tile-title {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  margin: 10px 20px; /* Adjust the title margins as needed */
+}
+
+
+/* Style the image container */
+.tile-image {
+  max-height: 200px; /* Adjust the maximum image height as needed */
+  overflow: hidden;
+}
+
+.tile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fits the container */
+}
+
+
+
+
+
+              /*article content*/
+
+/* Style the container for article content */
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ebbebe;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the heading */
+.page-container h1 {
+  font-size: 28px;
+  margin-left: 15px;
+  color: #333;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+/* Style the paragraphs  */
+.page-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-left: 10px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Style hyperlinks within the article */
+.page-container a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.page-container a:hover {
+  color: #ffffff;
+  text-decoration: 0;
+}
+
+
+
+
+
+
+        /*embeded vid*/
+
+.video-container {
+  display: flex;
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.video {
+  flex: 1; /* Make the video take up all available horizontal space */
+}
+
+
+
+:root {
+  --background-color: #ffffff; /* Light mode background color */
+  --text-color: #333; /* Light mode text color */
+  --button-background: #333; /* Light mode button background color */
+  --button-text-color: #fff; /* Light mode button text color */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.nav-button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --background-color: #00e5ff; /* Dark mode background color */
+  --text-color: #fff; /* Dark mode text color */
+  --button-background: #1a1a1a; /* Dark mode button background color */
+  --button-text-color: #fff; /* Dark mode button text color */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: var(--background-color);
+  color: #fff;
+}
+
+.dark-mode .nav-button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+}
+
+.dark-mode .paragraph-box {
+  /* Dark mode styles for the paragraph box */
+  color: #000000; /* Adjust as needed */
 }
