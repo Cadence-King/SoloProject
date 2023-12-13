@@ -5,8 +5,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
 import HomePage from './components/HomePage';
-import Page1 from './components/page1';
-import Page2 from './components/page2';
+import Visual from './components/Visual';
+import Auditory from './components/Auditory';
+import Language from './components/Language';
+
+import { HashLink as Link } from 'react-router-hash-link';
+import TableOfContents from './components/TableOfContents'; // Import the TableOfContents component
+
 
 function App() {
   const [textScaling, setTextScaling] = useState(1);
@@ -27,28 +32,30 @@ function App() {
   
   // Increase text scaling
   const increaseTextScaling = () => {
-    setTextScaling(textScaling + 0.1);
+    setTextScaling(textScaling + 0.2);
   };
 
   // Decrease text scaling
   const decreaseTextScaling = () => {
-    setTextScaling(textScaling - 0.1);
+    setTextScaling(textScaling - 0.2);
   };
+
 
   return (
     <Router>
       <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
-        <Header />
-        <NavigationBar
-          toggleDarkMode={toggleDarkMode}
-          increaseTextScaling={increaseTextScaling}
-          decreaseTextScaling={decreaseTextScaling}
-        />
-        <Routes>
-          <Route path="/" element={<HomePage textScaling={textScaling} darkMode={darkMode}/>} />
-          <Route path="/page1" element={<Page1 textScaling={textScaling} darkMode={darkMode}/>} />
-          <Route path="/page2" element={<Page2 textScaling={textScaling} darkMode={darkMode}/>} />
-        </Routes>
+          <Header />
+          <NavigationBar
+            toggleDarkMode={toggleDarkMode}
+            increaseTextScaling={increaseTextScaling}
+            decreaseTextScaling={decreaseTextScaling}
+          />
+          <Routes>
+            <Route path="/" element={<HomePage textScaling={textScaling} />} />
+            <Route path="/Visual" element={<Visual textScaling={textScaling} />} />
+            <Route path="/Auditory" element={<Auditory textScaling={textScaling} />} />
+            <Route path="/Language" element={<Language textScaling={textScaling} />} />
+          </Routes>
       </div>
     </Router>
   );

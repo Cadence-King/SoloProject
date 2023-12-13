@@ -1,18 +1,15 @@
-
-/* Style the header image */
-header img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Style the header */
 .header {
-  background-color: #74b6fd;
-  color: #fff;
+  background-color: #e6f0f5;
+  color: #026d9b;
   text-align: left;
   padding: 1px 0;
   font-size: 1rem; /* Adjust the font size as needed */
   margin: 0;
+}
+
+.dark-mode .header{
+  background-color: #000000;
+  color: #fff;
 }
 
 .header-content {
@@ -25,8 +22,8 @@ header img {
   max-width: 100px; /* Adjust the logo size as needed */
   height: auto;
   margin-bottom: 0px;
-  margin-right: 15px; /* Add spacing between the logo and title */
-  margin-left: 10px;
+  margin-right: 20px; /* Add spacing between the logo and title */
+  margin-left: 20px;
 }
 
 
@@ -36,7 +33,7 @@ header img {
 
 /* Style the bounding box for the paragraph */
 .paragraph-box {
-  border: 2px solid #007bff52; /* Border color (adjust as needed) */
+  border: 2px solid #025e9b; /* Border color (adjust as needed) */
   padding: 10px 20px; /* Padding inside the box */
   margin: 20px 5px; /* Margin to separate it from other content */
   border-radius: 10px; /* Rounded corners */
@@ -53,13 +50,6 @@ header img {
 
 
 
-/* Style the navigation bar */
-nav {
-  background-color: #f70000;
-  color: #84d479;
-  padding: 10px 0;
-  text-align: center;
-}
 
 /* Style the navigation links */
 nav a {
@@ -67,6 +57,7 @@ nav a {
   text-decoration: none;
   margin: 0 10px;
 }
+
 
 .nav-dropdown {
   position: relative;
@@ -76,30 +67,31 @@ nav a {
 .nav-dropdown .dropdown-content {
   position: absolute;
   top: 100%; /* Position the content below the button */
-  left: 0;
+  right: auto;
 }
 
 .dropdown-button {
-  background-color: #333; /* Button background color */
-  color: #fff; /* Text color */
+  background-color: #333; 
+  color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 29px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
   display: inline-block;
+
 }
 
 .dropdown-button:hover {
-  background-color: #4d4d4d; /* Hover color */
+  background-color: #4d4d4d;
   /*border-radius: 0px;*/
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #4d4d4d; /* Dropdown background color */
+  background-color: #4d4d4d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   top: 40px;
@@ -117,7 +109,9 @@ nav a {
 }
 
 .dropdown-content a:hover {
-  background-color: #007bff;
+  background-color: #c4c4c4;
+  color: #0070E0;
+  text-decoration: underline;
 }
 
 .nav-dropdown:hover .dropdown-content {
@@ -133,28 +127,11 @@ nav a {
   display: block;
 }
 
-
-/* Add styles for the locked and unlocked states */
-.locked .nav-dropdown .dropdown-button {
-  background-color: #007bff; /* Background color when the dropdown is locked */
-}
-
-/* Styles for the dropdown content */
-.locked .nav-dropdown .dropdown-content {
-  display: block;
-}
-
-/* Styles for the dropdown button */
-.locked .nav-dropdown .dropdown-button:hover {
-  background-color: #007bff; /* Hover color when the dropdown is locked */
-}
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #007bff;
+  align-items: left;
+  background-color: #026d9b;
   color: #fff;
   padding: 10px;
 }
@@ -164,33 +141,17 @@ nav a {
   gap: 10px;
 }
 
-/* Style the dark mode and text size buttons */
-.nav-right button {
-  background-color: #333; /* Button background color */
-  color: #fff; /* Text color */
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nav-right button:hover {
-  background-color: #007bffd3; /* Hover color */
-}
-
 /* Add some padding to the buttons for spacing */
 .nav-right button:first-child {
   margin-right: 10px;
 }
-
 
 /* Add styles for the home page button */
 .nav-button {
   background-color: #333; /* Button background color */
   color: #fff; /* Text color */
   border: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -198,14 +159,13 @@ nav a {
   display: inline-block; /* Prevent link element from stretching */
 }
 
+.nav-button:hover {
+  background-color: #4d4d4d; /* Hover color */
+}
 
 .nav-left .nav-button {
   margin-right: 10px;
 }
-
-
-
-
 
 
 
@@ -220,7 +180,6 @@ nav a {
   margin: 20px;
 }
 
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust the tile width as needed */
@@ -230,8 +189,7 @@ nav a {
 
 /* Style the clickable tiles */
 .tile {
-
-  background-color: #007bff;
+  background-color: #026d9b;
   color: #ffffff;
   width: 400px;
   height: 300px;
@@ -239,16 +197,16 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 5px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   position: relative;
   overflow: hidden;
 }
 
 .tile:hover {
-  background-color: #0056b3;
+  background-color: #025e9b;
   transform: scale(1.05);
 }
 
@@ -260,27 +218,32 @@ nav a {
 
 /* Style the tile description */
 .tile-description {
+  display: flex;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
   font-size: 14px;
   margin-top: 5px;
-  display: none; /* Initially hidden */
+  /*display: none; /* Initially hidden */
 }
 
 /* Show the tile description on hover */
 .tile:hover .tile-description {
-  display: block;
+  text-decoration: none;
 }
 
 /* Style the title */
 .tile-title {
   font-size: 1.2rem; /* Adjust the font size as needed */
   margin: 10px 20px; /* Adjust the title margins as needed */
+  text-align: center;
 }
-
 
 /* Style the image container */
 .tile-image {
   max-height: 200px; /* Adjust the maximum image height as needed */
   overflow: hidden;
+
 }
 
 .tile-image img {
@@ -300,15 +263,19 @@ nav a {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ebbebe;
+  background-color: #eff4f7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.dark-mode .page-container {
+  background-color: #000000; /* Dark mode background color */
+}
+
 
 /* Style the heading */
 .page-container h1 {
   font-size: 28px;
   margin-left: 15px;
-  color: #333;
   margin-top: auto;
   margin-bottom: 10px;
 }
@@ -318,78 +285,141 @@ nav a {
   font-size: 16px;
   line-height: 1.6;
   margin-left: 10px;
-  color: #ffffff;
   margin-bottom: 15px;
 }
 
-/* Style hyperlinks within the article */
-.page-container a {
-  color: #ffffff;
-  text-decoration: underline;
-  transition: color 0.3s ease;
+.text-style {
+  color: #333; /* Light mode text color */
 }
 
-.page-container a:hover {
-  color: #ffffff;
-  text-decoration: 0;
+.title-style {
+  color: #333; /* Light mode text color */
+}
+
+.dark-mode .text-style {
+  color: #fff; /* Dark mode text color */
+}
+
+.dark-mode .title-style {
+  color: #fff; /* Dark mode text color */
 }
 
 
 
+  /*embeded vid*/
 
-
-
-        /*embeded vid*/
-
-.video-container {
+.video-text-container {
   display: flex;
-  max-width: 800px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  flex-wrap: wrap;
+  gap: 10x; /* Adjust the gap between video and text as needed */
+  align-items: flex-start; /* Align items at the start of the container */
+}
+  
+  /* Style the text container */
+.text-container {
+  flex: 1 1 20%; /* Allow the text to take up half of the container */
+}
+  /* Style the video container */
+  .video-container {
+    flex: 1 1 80%; /* Allow the video to take up half of the container */
+  }
+
+  /* Responsive layout adjustments */
+@media screen and (max-width: 768px) {
+  .video-text-container {
+    flex-direction: column; /* Stack video and text vertically on smaller screens */
+  }
+
+  .video-container,
+  .text-container {
+    flex: 1 1 100%; /* Full width for individual video and text on smaller screens */
+  }
 }
 
-.video {
-  flex: 1; /* Make the video take up all available horizontal space */
-}
 
-
-
-:root {
-  --background-color: #ffffff; /* Light mode background color */
-  --text-color: #333; /* Light mode text color */
-  --button-background: #333; /* Light mode button background color */
-  --button-text-color: #fff; /* Light mode button text color */
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.nav-button {
-  background-color: var(--button-background);
-  color: var(--button-text-color);
-}
-
-/* Dark mode styles */
-.dark-mode {
-  --background-color: #00e5ff; /* Dark mode background color */
-  --text-color: #fff; /* Dark mode text color */
-  --button-background: #1a1a1a; /* Dark mode button background color */
-  --button-text-color: #fff; /* Dark mode button text color */
+.App {
+  background-color: #e6f0f5; /* Set your light mode background color */
+  color: #333; /* Set your light mode text color */
 }
 
 /* Dark mode styles */
-body.dark-mode {
-  background-color: var(--background-color);
-  color: #fff;
+.App.dark-mode {
+  background-color: #01415d; /* Set your dark mode background color */
 }
 
-.dark-mode .nav-button {
-  background-color: var(--button-background);
-  color: var(--button-text-color);
+
+
+
+
+
+
+/* Add styles for the Table of Contents */
+.table-of-contents {
+  display: flex;
+  position:sticky;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 20px;
+  padding: 10px;
+  background-color: #eeeeee;
+  border: 1px solid #027c9b;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  width: auto;
+  transition: all 1s ease;
 }
 
-.dark-mode .paragraph-box {
-  /* Dark mode styles for the paragraph box */
-  color: #000000; /* Adjust as needed */
+.table-of-contents h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.table-of-contents li {
+  margin-bottom: 5px;
+}
+
+.table-of-contents .toc-content {
+  list-style-type: disc;
+  padding-left: 3em; /* Adjust the padding as needed */
+}
+
+.table-of-contents a {
+  text-decoration: none;
+  color: #333;
+}
+
+.table-of-contents a:hover {
+  color: #0070E0;
+  text-decoration: underline;
+}
+
+.table-of-contents.hidden{
+}
+
+.table-of-contents ul.hidden{
+display: none;
+
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the toggle button */
+.table-of-contents .toggle-button {
+  margin-right: 8px; /* Adjust as needed */
+}
+
+/* Style the title */
+.table-of-contents .toc-title {
+  margin: 0;
 }

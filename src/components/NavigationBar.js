@@ -1,4 +1,3 @@
-// src/components/NavigationBar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -41,8 +40,9 @@ const NavigationBar = ({ toggleDarkMode, increaseTextScaling, decreaseTextScalin
             Menu {isDropdownOpen ? '▲' : '▼'}
           </button>
           <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`} onClick={closeDropdown}>
-            <Link to="/page1">Visual</Link>
-            <Link to="/page2">Auditory</Link>
+            <Link to="/Visual">Visual</Link>
+            <Link to="/Auditory">Auditory</Link>
+            <Link to="/Language">Language</Link>
           </div>
         </div>
       </div>

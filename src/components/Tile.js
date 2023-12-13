@@ -1,4 +1,3 @@
-// Tile.js
 import React from 'react';
 
 const Tile = ({ title, imageSrc, description, link }) => {
