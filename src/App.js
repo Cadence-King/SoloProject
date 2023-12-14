@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -8,9 +7,6 @@ import HomePage from './components/HomePage';
 import Visual from './components/Visual';
 import Auditory from './components/Auditory';
 import Language from './components/Language';
-
-import { HashLink as Link } from 'react-router-hash-link';
-import TableOfContents from './components/TableOfContents'; // Import the TableOfContents component
 
 
 function App() {

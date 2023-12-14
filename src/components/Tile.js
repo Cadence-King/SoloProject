@@ -9,6 +9,7 @@ const Tile = ({ title, imageSrc, description, link }) => {
       <div className="tile-content">
         <h3 className="tile-title">{title}</h3>
         <p className="tile-description">{description}</p>
+        <p className="tile-call"> Click Here to Learn More</p>
       </div>
     </a>
   );

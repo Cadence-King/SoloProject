@@ -1,9 +1,19 @@
+.App {
+  background-color: #e6f0f5;
+  color: #333;
+}
+
+.App.dark-mode {
+  background-color: #01415d;
+}
+
+
 .header {
   background-color: #e6f0f5;
   color: #026d9b;
   text-align: left;
   padding: 1px 0;
-  font-size: 1rem; /* Adjust the font size as needed */
+  font-size: 1rem; 
   margin: 0;
 }
 
@@ -19,45 +29,20 @@
 }
 
 .logo {
-  max-width: 100px; /* Adjust the logo size as needed */
+  max-width: 100px; 
   height: auto;
   margin-bottom: 0px;
-  margin-right: 20px; /* Add spacing between the logo and title */
+  margin-right: 20px; 
   margin-left: 20px;
 }
 
 
-
-
-
-
-/* Style the bounding box for the paragraph */
-.paragraph-box {
-  border: 2px solid #025e9b; /* Border color (adjust as needed) */
-  padding: 10px 20px; /* Padding inside the box */
-  margin: 20px 5px; /* Margin to separate it from other content */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle 3D effect */
-  display: inline-block; /* Ensure the box wraps its content */
-}
-
-/* Style the text inside the bounding box */
-.paragraph-text {
-  font-size: 16px; /* Font size (adjust as needed) */
-  color: #333; /* Text color */
-  line-height: 1.5; /* Line height for readability */
-}
-
-
-
-
-/* Style the navigation links */
+                            /* NAV BAR */
 nav a {
   color: #806161;
   text-decoration: none;
   margin: 0 10px;
 }
-
 
 .nav-dropdown {
   position: relative;
@@ -66,7 +51,7 @@ nav a {
 
 .nav-dropdown .dropdown-content {
   position: absolute;
-  top: 100%; /* Position the content below the button */
+  top: 100%;
   right: auto;
 }
 
@@ -85,7 +70,6 @@ nav a {
 
 .dropdown-button:hover {
   background-color: #4d4d4d;
-  /*border-radius: 0px;*/
 }
 
 .dropdown-content {
@@ -100,7 +84,6 @@ nav a {
   padding: 10px;
 }
 
-/* Styles for the dropdown links */
 .dropdown-content a {
   color: #fff;
   text-decoration: none;
@@ -122,7 +105,6 @@ nav a {
   display: block;
 }
 
-/* Add these styles to style the dropdown content */
 .show.clicked {
   display: block;
 }
@@ -141,26 +123,24 @@ nav a {
   gap: 10px;
 }
 
-/* Add some padding to the buttons for spacing */
 .nav-right button:first-child {
   margin-right: 10px;
 }
 
-/* Add styles for the home page button */
 .nav-button {
-  background-color: #333; /* Button background color */
-  color: #fff; /* Text color */
+  background-color: #333;
+  color: #fff; 
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-decoration: none; /* Remove underline for link element */
-  display: inline-block; /* Prevent link element from stretching */
+  text-decoration: none; 
+  display: inline-block; 
 }
 
 .nav-button:hover {
-  background-color: #4d4d4d; /* Hover color */
+  background-color: #4d4d4d; 
 }
 
 .nav-left .nav-button {
@@ -171,23 +151,52 @@ nav a {
 
 
 
+                                  /* Home Page */
 
-/* Style the clickable tiles on the home page */
-.tile-container {
-  display: flex;
+
+@media screen and (max-width: 500px) {
+  .grid {
+    margin:0%;
+    display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+    align-items: center;
+  }
+  
+  .paragraph-box {
+    padding: auto;
+    margin:auto;
+    display:contents;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+  }
+
+  iframe {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
 }
+}
+
+
+.paragraph-box {
+  border: 2px solid #025e9b; 
+  padding: auto; 
+  margin: auto; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  display: inline-block;
+}
+
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust the tile width as needed */
-  gap: 50px; /* Adjust the gap between tiles as needed */
-  padding: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Style the clickable tiles */
 .tile {
   background-color: #026d9b;
   color: #ffffff;
@@ -203,6 +212,8 @@ nav a {
   transition: background-color 0.5s ease;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  text-align: center;
 }
 
 .tile:hover {
@@ -210,55 +221,87 @@ nav a {
   transform: scale(1.05);
 }
 
-/* Style the tile text */
 .tile-text {
   font-size: 18px;
   font-weight: bold;
 }
 
-/* Style the tile description */
 .tile-description {
   display: flex;
   position: relative;
-  text-align: center;
-  text-decoration: none;
   font-size: 14px;
   margin-top: 5px;
-  /*display: none; /* Initially hidden */
 }
 
-/* Show the tile description on hover */
 .tile:hover .tile-description {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-/* Style the title */
 .tile-title {
-  font-size: 1.2rem; /* Adjust the font size as needed */
-  margin: 10px 20px; /* Adjust the title margins as needed */
-  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 20px;
 }
 
-/* Style the image container */
 .tile-image {
-  max-height: 200px; /* Adjust the maximum image height as needed */
+  max-height: 200px; 
   overflow: hidden;
-
 }
 
 .tile-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image fits the container */
+  object-fit: cover;
+}
+
+.tile-call{
+  text-decoration: underline;
 }
 
 
+.video-text-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+
+  align-items: center; /* Align items at the start of the container */
+}
+  
+/* Style the video container */
+.video-container {
+  /*flex: auto; /* Allow the video to take up half of the container */
+margin: auto;
+  /*
+  margin-bottom: 0px;
+  margin-right: 5px;
+  margin-left: 5px; /**/
+  margin-top: 5px;
+}
+
+  /* Style the text container */
+.text-container {
+  flex: auto; /* Allow the text to take up half of the container */
+}
+  
+@media screen and (max-width: 768px) {
+  .video-text-container {
+    flex-direction: column;
+  }
+
+  .video-container,
+  .text-container {
+    flex: 1 1 100%;
+  }
+
+}
+  
 
 
 
-              /*article content*/
 
-/* Style the container for article content */
+
+                           /*article content*/
+
 .page-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -268,11 +311,9 @@ nav a {
 }
 
 .dark-mode .page-container {
-  background-color: #000000; /* Dark mode background color */
+  background-color: #000000;
 }
 
-
-/* Style the heading */
 .page-container h1 {
   font-size: 28px;
   margin-left: 15px;
@@ -280,7 +321,6 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* Style the paragraphs  */
 .page-container p {
   font-size: 16px;
   line-height: 1.6;
@@ -288,72 +328,17 @@ nav a {
   margin-bottom: 15px;
 }
 
-.text-style {
-  color: #333; /* Light mode text color */
-}
-
-.title-style {
-  color: #333; /* Light mode text color */
-}
-
-.dark-mode .text-style {
-  color: #fff; /* Dark mode text color */
-}
-
-.dark-mode .title-style {
-  color: #fff; /* Dark mode text color */
-}
-
-
-
-  /*embeded vid*/
-
-.video-text-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10x; /* Adjust the gap between video and text as needed */
-  align-items: flex-start; /* Align items at the start of the container */
-}
-  
-  /* Style the text container */
-.text-container {
-  flex: 1 1 20%; /* Allow the text to take up half of the container */
-}
-  /* Style the video container */
-  .video-container {
-    flex: 1 1 80%; /* Allow the video to take up half of the container */
-  }
-
-  /* Responsive layout adjustments */
-@media screen and (max-width: 768px) {
-  .video-text-container {
-    flex-direction: column; /* Stack video and text vertically on smaller screens */
-  }
-
-  .video-container,
-  .text-container {
-    flex: 1 1 100%; /* Full width for individual video and text on smaller screens */
-  }
-}
-
-
-.App {
-  background-color: #e6f0f5; /* Set your light mode background color */
-  color: #333; /* Set your light mode text color */
-}
-
-/* Dark mode styles */
-.App.dark-mode {
-  background-color: #01415d; /* Set your dark mode background color */
-}
+.text-style {color: #333;}
+.title-style {color: #333;}
+.dark-mode .text-style {color: #fff;}
+.dark-mode .title-style {color: #fff;}
 
 
 
 
 
 
-
-/* Add styles for the Table of Contents */
+                          /* Table of Contents */
 .table-of-contents {
   display: flex;
   position:sticky;
@@ -382,7 +367,7 @@ nav a {
 
 .table-of-contents .toc-content {
   list-style-type: disc;
-  padding-left: 3em; /* Adjust the padding as needed */
+  padding-left: 3em;
 }
 
 .table-of-contents a {
@@ -400,7 +385,6 @@ nav a {
 
 .table-of-contents ul.hidden{
 display: none;
-
 }
 
 .toggle-button {
@@ -414,12 +398,10 @@ display: none;
   flex-direction: column;
 }
 
-/* Style the toggle button */
 .table-of-contents .toggle-button {
-  margin-right: 8px; /* Adjust as needed */
+  margin-right: 8px; 
 }
 
-/* Style the title */
 .table-of-contents .toc-title {
   margin: 0;
 }
